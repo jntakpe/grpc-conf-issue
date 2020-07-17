@@ -1,0 +1,8 @@
+micronaut:
+  application:
+    name: executor
+grpc:
+  channels:
+    foo:
+      address: http://localhost:8081
+      plaintext: true

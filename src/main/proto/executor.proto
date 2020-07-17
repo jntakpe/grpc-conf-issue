@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "reproducer.grpc";
+option java_outer_classname = "Executor";
+option objc_class_prefix = "HLW";
+
+package reproducer.grpc;
+
+service ExecutorService {
+  rpc send (ExecutorRequest) returns (ExecutorReply) {}
+}
+
+message ExecutorRequest {
+  string name = 1;
+}
+
+message ExecutorReply {
+  string message = 1;
+}
